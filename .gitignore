@@ -1,0 +1,19 @@
+# -*- gitignore -*-
+
+# Editor files
+*~
+.*.swp
+
+# Compiled code
+*.o
+*.so
+*.a
+*.x
+*.pyc
+
+# Source code tarballs for the tools
+/packages
+
+# Installation path of the tools (to be packed into container)
+/*/root
+

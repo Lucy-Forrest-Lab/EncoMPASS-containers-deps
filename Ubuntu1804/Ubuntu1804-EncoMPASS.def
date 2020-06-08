@@ -1,0 +1,40 @@
+BootStrap: docker
+From: ubuntu:18.04
+
+
+%post
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get update
+    apt-get upgrade --no-install-recommends -y
+
+    # General depedencies
+    apt-get install --no-install-recommends -y \
+        autoconf \
+        automake \
+        autotools-dev \
+        build-essential \
+        gfortran \
+        make
+
+    # Dependencies for CESymm and QuatSymm
+    apt-get install --no-install-recommends -y \
+        openjdk-8-jre-headless    
+    # Fix Ubuntu bug
+    # https://askubuntu.com/questions/695560/assistive-technology-not-found-awterror
+    sed -i 's/assistive/#assistive/' /etc/java-8-openjdk/accessibility.properties
+
+    # Dependencies for HSSP and DSSP
+    apt-get install --no-install-recommends -y \
+        libzeep-dev \
+        libboost-all-dev \
+        libbz2-dev \
+        libz-dev
+    
+    apt-get clean
+
+
+%environment
+    LC_ALL=C
+    export LC_ALL
+    export ENCOMPASS_DIR=/EncoMPASS
+    export PATH=$ENCOMPASS_DIR/AnAnaS-v0.9:$ENCOMPASS_DIR/cesymm-2.1.0:$ENCOMPASS_DIR/dssp-3.1.4/bin:$ENCOMPASS_DIR/frtmalign:$ENCOMPASS_DIR/hssp-3.1.5/bin:$ENCOMPASS_DIR/muscle3.8.31:$ENCOMPASS_DIR/ppm:$ENCOMPASS_DIR/quatsymm-2.1.0:$ENCOMPASS_DIR/symd1.3w:$ENCOMPASS_DIR/symd1.61:$PATH
