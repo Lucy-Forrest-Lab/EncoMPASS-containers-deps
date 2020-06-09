@@ -2,6 +2,12 @@ BootStrap: docker
 From: ubuntu:18.04
 
 
+%help
+    Definition file to install and distribute the dependencies of the tools
+    used to develop and maintain the EncoMPASS database
+    (https://encompass.ninds.nih.gov/).
+
+
 %post
     export DEBIAN_FRONTEND=noninteractive
     apt-get update
@@ -38,3 +44,7 @@ From: ubuntu:18.04
     export LC_ALL
     export ENCOMPASS_DIR=/EncoMPASS
     export PATH=$ENCOMPASS_DIR/AnAnaS-v0.9:$ENCOMPASS_DIR/cesymm-2.1.0:$ENCOMPASS_DIR/dssp-3.1.4/bin:$ENCOMPASS_DIR/frtmalign:$ENCOMPASS_DIR/hssp-3.1.5/bin:$ENCOMPASS_DIR/muscle3.8.31:$ENCOMPASS_DIR/ppm:$ENCOMPASS_DIR/quatsymm-2.1.0:$ENCOMPASS_DIR/symd1.3w:$ENCOMPASS_DIR/symd1.61:$PATH
+
+
+%labels
+    Author giacomofiorin

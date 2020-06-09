@@ -1,14 +1,15 @@
 # Container for EncoMPASS development
 
-Contains a Singularity definition file to install and distribute the
-dependencies of the tools used in the development and maintenance of the
+Singularity definition files to install and distribute the dependencies of the
+tools used in the development and maintenance of the
 [EncoMPASS](https://encompass.ninds.nih.gov/) database.
+
+Links to pre-built container images (can be used immediately with Singularity available):
+- [Ubuntu 18.04](https://cloud.sylabs.io/library/giacomofiorin/default/encompass-development#container-5edf06ffb1793638c11335b2) with dependencies only (no apps packaged). This is suitable for building and installing the apps on your own, using a writable directory mounted as `/EncoMPASS` in the container (see `--bind` in the Singularity user guide).
 
 Singularity documentation: https://sylabs.io/guides/latest/user-guide/
 
-Link to pre-built container images: TBD.
-
-## List of packaged applications
+## List of applications (to be) packaged
 
 Commands should be run inside the container, or passed as an argument to it
 (or to an explicit `singularity exec` command). Don't forget to escape the `$`
