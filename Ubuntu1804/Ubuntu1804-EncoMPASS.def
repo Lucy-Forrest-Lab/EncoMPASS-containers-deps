@@ -20,6 +20,7 @@ From: ubuntu:18.04
         autotools-dev \
         build-essential \
         gfortran \
+        lsb-core \
         make
 
     # Dependencies for CESymm and QuatSymm
