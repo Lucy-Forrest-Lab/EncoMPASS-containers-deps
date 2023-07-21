@@ -1,17 +1,25 @@
-# Container for EncoMPASS development
+# Container for EncoMPASS development and maintenance
 
-Singularity definition files to install and distribute the dependencies of the
-tools used in the development and maintenance of the
-[EncoMPASS](https://encompass.ninds.nih.gov/) database.
+Development of the [EncoMPASS](https://encompass.ninds.nih.gov/) database was
+carried out using multiple applications, whose dependencies are collected in
+a container in Singularity/Apptainer format.
 
 This repository *does not include the scientific software itself*.
 
-Links to pre-built container images (can be used immediately with Singularity available):
-- [Ubuntu 18.04](https://cloud.sylabs.io/library/giacomofiorin/default/encompass-development#container-5edf06ffb1793638c11335b2) with dependencies only (no apps packaged). This is suitable for building and installing the apps on your own, using a writable directory mounted as `/EncoMPASS` in the container (see `--bind` in the Singularity user guide).
+The file `Ubuntu1804-EncoMPASS.def` contains the definition file to build
+this container.  There is also a
+[link](https://cloud.sylabs.io/library/giacomofiorin/default/encompass-development)
+to a pre-built container image for the amd64 architecture.
+
+To use the apps below, install them in a local folder writable by you and run
+the container while mounting that folder as `/EncoMPASS` (see the option
+`--bind` in the Singularity/Apptainer user guide).
 
 Singularity documentation: https://sylabs.io/guides/latest/user-guide/
+Apptainer documentation: https://apptainer.org/docs
 
-## List of applications (to be) packaged
+
+## List of applications supported by this container
 
 Commands should be run inside the container, or passed as an argument to it
 (or to an explicit `singularity exec` command). Don't forget to escape the `$`
