@@ -23,6 +23,9 @@ From: ubuntu:18.04
         lsb-core \
         make
 
+    # Dependencies for PyMOL
+    apt-get install --no-install-recommends -y libgl1-mesa-glx
+
     # Dependencies for CESymm and QuatSymm
     apt-get install --no-install-recommends -y \
         openjdk-8-jre-headless    
@@ -44,8 +47,5 @@ From: ubuntu:18.04
     LC_ALL=C
     export LC_ALL
     export ENCOMPASS_DIR=/EncoMPASS
-    export PATH=$ENCOMPASS_DIR/AnAnaS-v0.9:$ENCOMPASS_DIR/cesymm-2.1.0:$ENCOMPASS_DIR/dssp-3.1.4/bin:$ENCOMPASS_DIR/frtmalign:$ENCOMPASS_DIR/hssp-3.1.5/bin:$ENCOMPASS_DIR/muscle3.8.31:$ENCOMPASS_DIR/ppm:$ENCOMPASS_DIR/quatsymm-2.1.0:$ENCOMPASS_DIR/symd1.3w:$ENCOMPASS_DIR/symd1.61:$PATH
-
-
-%labels
-    Author giacomofiorin
+    export PATH=$ENCOMPASS_DIR/AnAnaS-v1.1:$ENCOMPASS_DIR/cesymm-2.2.3-SNAPSHOT:$ENCOMPASS_DIR/quatsymm-2.2.3-SNAPSHOT:$ENCOMPASS_DIR/dssp-3.1.4/bin:$ENCOMPASS_DIR/frtmalign:$ENCOMPASS_DIR/hssp-3.1.5/bin:$ENCOMPASS_DIR/muscle5.1:$ENCOMPASS_DIR/muscle3.8.31:$ENCOMPASS_DIR/ppm:$ENCOMPASS_DIR/symd1.3w:$ENCOMPASS_DIR/symd1.61:$PATH
+ 

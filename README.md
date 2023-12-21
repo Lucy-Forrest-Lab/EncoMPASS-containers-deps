@@ -25,7 +25,7 @@ Commands should be run inside the container, or passed as an argument to it
 (or to an explicit `singularity exec` command). Don't forget to escape the `$`
 sign as `\$` (shell variables are defined inside the container).
 
-## AnAnaS 0.9
+## AnAnaS 1.1
   Link: https://team.inria.fr/nano-d/software/ananas/  
   Pre-compiled static executable.  
   Test command line:
@@ -33,13 +33,14 @@ sign as `\$` (shell variables are defined inside the container).
 $ ananas $ENCOMPASS_DIR/1okc.pdb
 ```
 
-## CESymm 2.1.0 and QuatSymm 2.1.0
-  Link: https://github.com/rcsb/symmetry/releases/tag/symmetry-2.1.0  
+## CESymm 2.2.3 and QuatSymm 2.2.3
+  Link: https://github.com/rcsb/symmetry  
   Java packages, with shell script wrappers; original scripts modified to use 30G of max allocatable memory (backed up as `run_*_small.sh`).  
   Test command line:
 ```
 $ runCESymm.sh -J $ENCOMPASS_DIR/1okc.pdb --stats
 ```
+  CESymm 2.1.0 and QuatSymm 2.1.0 are also available in the container.
 
 ## DSSP 3.1.5 and HSSP 3.1.5
   Link: https://github.com/cmbi/dssp https://github.com/cmbi/hssp  
@@ -63,6 +64,14 @@ $ frtmalign $ENCOMPASS_DIR/1okc.pdb <other_pdb>
   Test command line:  
 ```
 $ muscle3.8.31_i86linux64 -in <inputfile> -out <outputfile>
+```
+
+## MUSCLE 5.1.0
+  Link: https://github.com/rcedgar/muscle/releases/download/5.1.0/muscle5.1.linux_intel64
+  Pre-compiled static executable.
+  Test command line:
+```
+$ muscle5.1.linux_intel64 -in <inputfile> -out <outputfile>
 ```
 
 ## PPM
