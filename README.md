@@ -71,7 +71,7 @@ $ muscle3.8.31_i86linux64 -in <inputfile> -out <outputfile>
   Pre-compiled static executable.
   Test command line:
 ```
-$ muscle5.1.linux_intel64 -in <inputfile> -out <outputfile>
+$ muscle5.1.linux_intel64 -align <inputfile> -output <outputfile>
 ```
 
 ## PPM
